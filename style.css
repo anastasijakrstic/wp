@@ -1,0 +1,760 @@
+/*
+Theme Name: Atec
+Theme URI: https://atec.rs
+Author: Atec Technologies
+Author URI: https://atec.rs
+Version: 5.0
+*/
+
+/* 
+1.0 HEADER 
+2.0 MENU 
+3.0 PAGE LAYOUT & ELEMENTS
+4.0 PAGES
+5.0 FOOTER
+6.0 MEDIA QUERIES
+*/
+
+:root {
+  --primary-color: #87756c;
+  --secondary-color: #E8DBCB;
+  --tertiary-color: #0A6A44;
+}
+
+/******** 1.0 HEADER ********/
+
+.header {
+	padding: 0;
+}
+
+.header-bar {
+	position: absolute;
+	width: 100%;
+	left: 15px;
+}
+
+.fp-top {
+	height: 100vh;
+	background-image: url('images/lovegift-header.jpg');
+	padding: 0;
+}
+
+.logo-header {
+	text-align: center;
+}
+
+.header .socials,  .header-phone {
+	align-items: center;
+	display: flex;
+}
+
+.header .socials p, .header .socials ul {
+	display: inline-block;
+}
+
+.header .socials p {
+	font-size: 16px;
+	color: var(--secondary-color);
+	padding-right: 25px;
+	position: relative;
+}
+
+.header .socials p::after {
+	position: relative;
+	content: "";
+	display: inline-block;
+	background-color: var(--secondary-color);
+	width: 22px;
+	height: 1px;
+	top: -4px;
+	left: 10px;
+}
+
+.socials .fa-shopping-cart {
+	font-size: 17px;
+	margin-bottom: 11px;
+	color: #fff;
+	padding: 9px;
+	margin-left: 30px;
+	border-left: 1px solid;
+	padding-left: 20px;
+}
+
+.socials li {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.btn-social, .btn-social:visited {
+	color: #fff;
+	font-size: 15px;
+	transition-duration: 0.3s;
+	padding: 10px;
+}
+
+.btn-social:hover {
+	color: var(--secondary-color);
+	transition-duration: 0.5s;
+	background-color: transparent;
+}
+
+.fp-top {
+	padding-top: 14%;
+	text-align: center;
+}
+
+.fp-top .row {
+	justify-content: center;
+}
+
+.fp-top p {
+	font-size: 60px;
+	color: #fff;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+	font-weight: 500;
+}
+
+.fp-top .subtitle {
+	font-size: 40px;
+	color: var(--secondary-color);
+}
+
+.fp-top a {
+	color: #fff;
+	background-color: var(--primary-color);
+	padding: 15px 25px;
+	font-size: 17px;
+	border-radius: 2px;
+	letter-spacing: 1px;
+}
+
+.fp-top .fas {
+	padding-left: 12px;
+	transition-duration: 1s;
+}
+
+.fp-top a:hover .fas {
+	padding-left: 25px;
+	transition-duration: 1s;
+}
+
+.fp-top a:hover {
+	text-decoration: none;
+}
+
+.header-phone {
+	margin-top: -6px;
+}
+
+.header-phone a {
+	color: #fff;
+	font-size: 19px;
+}
+
+.header-phone a::before {
+	position: absolute;
+	content: "\f2a0";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 600;
+	transform: rotate(-30deg);
+	font-size: 50px;
+	top: 12px;
+	left: -30px;
+}
+
+/******** 1.0 END HEADER ********/
+
+/******** 2.0 MENU ********/
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.menu-item-has-children .caret {
+	position: relative;
+	content: "\f0d7";
+	font-family: "FontAwesome";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	z-index: 999;
+	cursor: auto;
+}
+
+.menu-item-has-children .caret::before {
+	position: absolute;
+	content: "\f0d7";
+	font-family: "FontAwesome";
+	top: -3px;
+	left: 3px;
+}
+
+
+/******** 2.0 END MENU ********/
+
+
+
+/******** 3.0 PAGE LAYOUT & ELEMENTS ********/
+
+/* Standard Page Elements */
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.breadcrumb-top li {
+	list-style: none;
+	display: inline;
+}
+
+.breadcrumb-top ul {
+	padding: 0;
+}
+
+#scroll-top {
+	width: 40px;
+	height: 40px;
+	opacity: 0.3;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	display: none;
+	text-indent: -9999px;
+	background: url('images/icon_top.png') no-repeat;
+	outline: none !important;
+}
+
+.atec-img-block-image img {
+	width: 100%;
+}
+
+.fp-section-1 .container-fluid {
+	padding: 0;
+	overflow: hidden;
+}
+
+.atec-img-block-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.atec-img-block-btn a {
+	padding: 15px 30px;
+	color: #fff;
+	background-color: #a50046;
+	font-size: 20px;
+	letter-spacing: 2px;
+	border: 1px solid #ffdb6a;
+}
+
+.atec-img-block-btn a:hover {
+	background-color: #b00b51;
+	text-decoration: none;
+	color: #ffdc6b;
+}
+
+.atec-img-block-text {
+	padding-bottom: 15px;
+	color: #fff;
+	font-size: 28px;
+	text-shadow: 2px 2px 4px #000000 !important
+}
+
+/* Search Page */
+
+body {
+	margin: 0;
+	padding: 0;
+	max-width: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.search {
+	background-color: #fff;
+	padding: 0;
+	color: #333;
+	border-radius: 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#error-page {
+	margin-top: 0 !important;
+}
+
+body {
+	max-width: inherit !important;
+}
+
+.search-box img {
+	width: 100%;
+	height: auto;
+}
+
+.search .old-price {
+	text-decoration: line-through;
+	opacity: 0.8;
+	color: #205aa7;
+}
+
+.search .price {
+	color: #205aa7;
+	font-weight: bold;
+}
+
+.search-box {
+	padding-bottom: 45px;
+}
+
+.search-content h3 {
+	height: 40px;
+}
+
+.search .well {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	display: none;
+}
+
+.more-button {
+	margin-top: 24px;
+}
+
+.search-box a {
+	color: #fff;
+	background-color: #205aa7;
+	font-weight: bold;
+	padding: 13px 15px;
+	border-radius: 3px;
+}
+
+.search-box a:hover, .search-box a:active {
+	background-color: #133f79;
+	text-decoration: none;
+}
+
+/******** 3.0 END PAGE LAYOUT & ELEMENTS  ********/
+
+
+
+/******** 4.0 PAGES ********/
+
+
+.page-content {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+/* Front page */
+
+.fp-categories .categories-box img {
+	width: 100%;
+}
+
+.title {
+	text-align: center;
+	padding-bottom: 55px;
+}
+
+.title h3 {
+	font-size: 35px;
+	margin: 0;
+}
+
+.subtitle {
+	font-family: 'Sacramento', cursive;
+	font-size: 30px;
+	margin-bottom: -7px;
+	color: var(--primary-color);
+}
+
+.fp-categories, .fp-products, .fp-blog {
+	padding: 30px 0 40px;
+}
+
+.categories-box {
+	text-align: center;
+}
+
+.categories-box h2 {
+	font-size: 23px;
+	height: 60px;
+	color: var(--primary-color);
+}
+
+.fp-products {
+	overflow: hidden;
+}
+
+.product-switch {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.product-switch div {
+	display: inline-block;
+	text-transform: uppercase;
+	color: var(--primary-color);
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 0 6px;
+	font-size: 15px;
+	padding: 5px 10px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.new-txt::before, .new-txt::after {
+	position: relative;
+	content: "\f004";
+	font-family: "Font Awesome 5 Free";
+	font-size: 10px;
+	top: -2px;
+	padding-right: 15px;
+	color: var(--secondary-color);
+	cursor: default;
+}
+
+.new-txt::after {
+	padding-right: 0;
+	padding-left: 15px;
+}
+
+.fp-products .product {
+	border: 1px solid var(--secondary-color);
+	margin: 0 !important;
+	width: 25% !important;
+	padding: 10px !important;
+	background-color: #f7f2ee;
+}
+
+.fp-products .product:nth-child(-n+4) {
+	border-bottom: none;
+}
+
+.fp-products .product:nth-child(-n+3), .fp-products .product:nth-child(n+5):nth-child(-n+7) {
+	border-right: none;
+}
+
+.fp-products .product h2 {
+	font-size: 16px !important;
+	color: #444;
+}
+
+.fp-products .woocommerce ul.products li.product .price {
+	color: var(--primary-color);
+	display: inline-block;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.fp-products .button {
+	background-color: var(--tertiary-color) !important;
+	color: #fff !important;
+	position: absolute !important;
+	bottom: 16px;
+	right: 10px;
+	transition-duration: 0.3s;
+	padding: 10px 20px !important;
+}
+
+.fp-products .button:hover {
+	background-color: #0C5B3C !important;
+	transition-duration: 0.5s;
+}
+
+/* Blog section */
+
+.fp-blog {
+	background-image: url('images/lovegift-section-bcg.jpg');
+}
+
+.fp-products.container-fluid {
+	background-image: url('images/lovegift-section-bcg.jpg');
+}
+
+.section-fp-blog-inner {
+	border: 1px solid var(--secondary-color);
+	text-align: left;
+	padding: 15px;
+	background-color: #f7f2ee;
+}
+
+.section-fp-blog-box img {
+	width: 100%;
+}
+
+.section-fp-blog-inner h4 {
+	height: 45px;
+}
+
+.section-fp-blog-box h4 {
+	font-size: 20px;
+	padding: 0;
+	margin-top: 5px;
+}
+
+.section-fp-blog-text {
+	height: 98px;
+	padding: 0;
+}
+
+.fp-blog .section-fp-blog-inner img {
+	padding-bottom: 10px !important;
+}
+
+.fp-blog .section-fp-blog-inner span {
+	color: var(--primary-color);
+}
+
+.section-fp-blog-inner .view-full-post {
+	padding: 10px 0;
+	border-top: 1px solid var(--secondary-color);
+}
+
+.section-fp-blog-inner .view-full-post a {
+	color: var(--primary-color);
+}
+
+.section-fp-blog-inner .view-full-post a:hover {
+	color: #574b45;
+	text-decoration: none;
+}
+
+.fp-blog .section-fp-blog-inner .fa-calendar-alt {
+	padding-right: 5px;
+}
+
+/* Blog single page */
+
+.single-blog-inner img {
+	width: 100%;
+}
+
+/* Contact page */
+
+.cf-contact-info h3, .contact-page-text h4 {
+	color: #1f1f1f;
+	margin-bottom: 25px;
+	margin-top: 20px;
+	font-size: 28px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.contact-detail-list ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+.contact-detail-list li {
+	margin-bottom: 18px;
+	margin-top: 10px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #808080;
+	position: relative;
+	padding-left: 40px;
+	list-style: none;
+}
+
+.contact-detail-list .contact-icon {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	top: 6px;
+}
+
+.contact-detail-list .contact-detail {
+	font-size: 14px;
+	line-height: 14px;
+	color: #1f1f1f;
+	display: block;
+}
+
+.contact-detail-list img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.contact-detail-list .small {
+	font-size: 12px;
+	color: #808080;
+	display: block;
+}
+
+.contact-page h4 {
+	color: #252525;
+	font-size: 28px;
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+.contact-page label {
+	width: 100%;
+}
+
+.wpcf7-form-control-wrap {
+	color: #717171;
+	font-weight: 400;
+}
+
+.contact-page input, .contact-page textarea {
+	border: 1px solid #aeaeae;
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 100%;
+}
+
+.contact-page p {
+	margin-bottom: 25px;
+	padding-left: 15px;
+}
+
+.button-submit-contact {
+	margin-top: 11px;
+}
+
+.page-id-7 .wpcf7-form-control.wpcf7-submit {
+	text-transform: uppercase;
+}
+
+.wpcf7-submit {
+	width: 150px !important;
+	background-color: #a50046;
+	color: #fff;
+	border: none;
+	padding: 5px 15px;
+	letter-spacing: 1px;
+	border: 1px solid #ffdb6a;
+}
+
+.wpcf7-submit:hover {
+	background-color: #b00b51;
+	text-decoration: none;
+	color: #ffdc6b;
+}
+
+/******** 5.0 PAGES ********/
+
+
+/******** 5.0 FOOTER ********/
+
+footer {
+	padding-bottom: 40px;
+	padding-top: 62px;
+	background-image: url('images/lovegift-footer-bcg.jpg');
+	background-position-y: bottom;
+}
+
+.footer-box img {
+	width: 100%;
+}
+
+footer .btn-outline-light.btn-social {
+	color: var(--secondary-color);
+	font-size: 18px;
+	padding-left: 5px;
+}
+
+footer .footer-social li {
+	padding: 0;
+}
+
+.footer-box ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.footer-box:nth-child(2) p {
+	font-size: 15px;
+}
+
+.footer-box:nth-child(3) ul {
+	line-height: 32px;
+	margin-top: -8px;
+}
+
+.footer-box:nth-child(3) ul a {
+	color: #333;
+	font-size: 17px;
+}
+
+.footer-box:last-child a {
+	color: #242424;
+	font-size: 25px;
+}
+
+.footer-box h4 {
+	margin-top: 0;
+	font-size: 21px;
+}
+
+.website-design {
+	background-color: var(--primary-color);
+	text-align: center;
+	color: #333;
+	font-size: 10px;
+	letter-spacing: 1px;
+	padding: 8px;
+	border-top: 1px dashed var(--secondary-color);
+}
+
+.website-design a {
+	color: #333;
+	font-weight: 500;
+}
+
+/******** 5.0 END FOOTER ********/
+
+
+/******** 6.0 MEDIA QUERIES ********/
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media only screen and (max-width : 768px) {
+    	
+    .dropdown-menu {
+	position: relative;
+	width: 100%;
+}
+
+    }
+
+    /* Small devices (landscape phones, 576px and up) */ 
+    @media only screen and (max-width : 576px) {
+
+    }
+
+
+    
+    /******** 6.0 END MEDIA QUERIES ********/
